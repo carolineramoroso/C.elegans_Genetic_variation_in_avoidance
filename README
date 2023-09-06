@@ -1,2 +1,29 @@
 The datasets and code in this repository accompany "Genetic variation in avoidance, yet no evidence for constitutive costs," by Caroline R. Amoroso, Leila L. Shepard, and Amanda K. Gibson
 
+- Analysis can be found in "Genetic variation in parasite avoidance_analysis.R"
+
+In the Data folder are three files:
+- "Lawn-leaving assay.csv": original data collected for this project on the parasite avoidance behavior of C. elegans strains. Explanations of column headers:
+  1. Block: experimental block, 1 through 6
+  2. Plate_number: replicate plate 
+  3. Bacterial_strain: OP50 (E. coli control) or Db10 (S. marcescens parasite)
+  4. C.elegans_strain: Code corresponding to one of 12 of the C. elegans strains from the CaeNDR "divergent set"" (see https://caendr.org/request-strains/)
+  5. Date_time_picked: Date and time that C. elegans hosts were added to the experimental plate
+  6. Date_time_counted: Date and time that C. elegans hosts were scored as on or off the bacterial lawn
+  7. Worms_ON: count of hosts on the lawn
+  8. Worms_OFF: count of hosts off the lawn
+  9. N_dead_worms: Number of dead worms (these were always on the lawn)
+  10. N_burrowed: Number of worms burrowed into agar (these were always under the lawn of OP50)
+  11. Excl_from_sub20: Sum of dead or male worms for subtracting "avoided" from 20 (analysis with liberal interpretation of avoidance)
+  
+
+- "Population growth assay.csv": Original data collected for this project on the fitness of 12 strains of C. elegans. Explanations of column headers: 
+  1. Block: experimental block, 1 through 5
+  2. Strain: C. elegans strain code, same as above
+  3. Plate: replicate plate number
+  4. Drop: Which of 4 to 6 20 ul drops was counted for the number of C. elegans individuals, reflecting the population size after a fixed period of population growth
+  5. Count_20ul: Mean of 3 separate counts of each 20ul drop
+  6. Burrowing_exclude: removed two replicates because C. elegans individuals had burrowed into agar, interfering with our ability to wash them from plates and count them.  
+  
+
+- "Zhang et al 2021 fecundity data.csv": previously published, independent measure of fitness from another lab for 7 of the 12 strains in the present study. Downloaded from https://github.com/AndersenLab/swept_broods/blob/main/processed_data/FileS3_lifetimeFecundity.csv; from Zhang et al. 2021 Natural variation in fecundity is correlated with species-wide levels of divergence in Caenorhabditis elegans. G3. https://doi.org/10.1093/g3journal/jkab168
