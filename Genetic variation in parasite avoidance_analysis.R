@@ -289,11 +289,9 @@ zd %>% filter(strain %in% pg_summ$Strain)
 
 #make a combined dataset to compare
 comp = zd %>% inner_join(pg_summ, by=c("strain"="Strain"))
-plot(pred_count~mean_b, data=comp)
-plot(mean_count~mean_b, data=comp)
+plot(mean_count~mean_b, data=comp) # Figure S1
 
-summary(lm(pred_count~mean_b, data=comp)) # vs our predictions
-summary(lm(mean_count~mean_b, data=comp)) # vs our means
+summary(lm(mean_count~mean_b, data=comp)) # model vs our means
 
 ggplot(data=comp, aes(x=mean_b, y=mean_count)) +
  geom_smooth(method="lm", formula=y~x, col="black") +
